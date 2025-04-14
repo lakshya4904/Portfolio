@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Lakshya Upadhyay</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+  <!-- Header -->
+  <header class="bg-dark text-white text-center">
+    <nav class="bg-gray-900 text-white">
+      <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <!-- Brand -->
+        <div class="text-2xl font-bold">
+          <a href="./index.html">Lakshya U.</a>
+        </div>
+
+        <!-- Hamburger Menu (for mobile) -->
+        <div class="md:hidden">
+          <button id="menu-btn" class="focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+              stroke="currentColor" class="w-8 h-8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6h16.5M3.75 12h16.5M3.75 18h16.5" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Menu Links (hidden on mobile) -->
+        <ul id="menu" class="hidden md:flex space-x-6">
+          <li><a href="./index.html" class="hover:underline">Home</a></li>
+          <li><a href="#" class="hover:underline">About</a></li>
+          <li><a href="./Review_page.html" class="hover:underline">Review Paper</a></li>
+          <li><a href="./Contact_page.html" class="hover:underline">Contact</a></li>
+          <li><a href="./Login_page.html" class="hover:underline">Login</a></li>
+        </ul>
+      </div>
+
+      <!-- Dropdown Menu for Mobile -->
+      <ul id="mobile-menu" class="hidden md:hidden flex flex-col space-y-2 px-4 bg-gray-800">
+        <li><a href="./index.html" class="hover:underline">Home</a></li>
+          <li><a href="#" class="hover:underline">About</a></li>
+          <li><a href="./Review_page.html" class="hover:underline">Review Paper</a></li>
+          <li><a href="./Contact_page.html" class="hover:underline">Contact</a></li>
+          <li><a href="./Login_page.html" class="hover:underline">Login</a></li>
+        </ul>
+    </nav>
+  </header>
+  <script>
+    // JavaScript to toggle mobile menu
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menu = document.getElementById('menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+  <!-- About Section -->
+  <section class="container mx-auto px-4 py-16">
+    <div class="flex flex-col md:flex-row items-center gap-4">
+      <!-- Image of the Person -->
+      <div class="md:w-1/3 w-full mb-8 md:mb-0">
+        <img src="./images/Profile_Picture.jpg" alt="Lakshya Upadhyay"
+          class="rounded shadow-lg mx-auto">
+      </div>
+
+      <!-- About Text -->
+      <div class="md:w-2/3 w-full text-center md:text-left">
+        <h1 class="text-4xl font-bold mb-4">Lakshya Upadhyay</h1>
+        <p class="text-lg mb-4">Lakshya is a passionate software engineer with over 2 years of experience in developing
+          web applications, mobile apps, and cloud-based solutions. With a keen eye for detail and a love for
+          problem-solving, Lakshya has led multiple projects to success, helping companies build scalable and efficient
+          software systems.</p>
+
+        <h2 class="text-2xl font-semibold mt-6 mb-4">Background & Education</h2>
+        <p class="mb-4">Lakshya currently perusing Bachelor's degree in Computer Application from the KSU. He has
+          continuously honed his skills, keeping up-to-date with the latest technologies, including React, Node.js, and
+          serverless architectures.</p>
+
+        <h2 class="text-2xl font-semibold mt-6 mb-4">Expertise</h2>
+        <ul class="list-disc list-inside text-lg mb-4">
+          <li>Full-Stack Web Development</li>
+          <li>Cloud Solutions (AWS, Azure)</li>
+          <li>Mobile App Development (iOS & Android)</li>
+          <li>API Design & Microservices</li>
+          <li>DevOps & Continuous Integration</li>
+        </ul>
+
+        <h2 class="text-2xl font-semibold mt-6 mb-4">Achievements</h2>
+        <ul class="list-disc list-inside text-lg">
+          <!-- <li>Awarded "Developer of the Year" at TechVille Inc. in 2020</li> -->
+          <li>Successfully launched over 2 web and mobile applications</li>
+          <li>Keynote speaker at various technology conferences</li>
+          <li>Contributor to open-source projects</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white text-center py-6 mt-16">
+    <p>&copy; 2024 Lakshya Upadhyay. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
