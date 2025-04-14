@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review - Kubernetes and Container Orchestration</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+  <!-- Header -->
+  <header class="bg-dark text-white text-center">
+    <nav class="bg-gray-900 text-white">
+      <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <!-- Brand -->
+        <div class="text-2xl font-bold">
+          <a href="./index.html">Lakshya U.</a>
+        </div>
+
+        <!-- Hamburger Menu (for mobile) -->
+        <div class="md:hidden">
+          <button id="menu-btn" class="focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+              stroke="currentColor" class="w-8 h-8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6h16.5M3.75 12h16.5M3.75 18h16.5" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Menu Links (hidden on mobile) -->
+        <ul id="menu" class="hidden md:flex space-x-6">
+          <li><a href="./index.html" class="hover:underline">Home</a></li>
+          <li><a href="./About_page.html" class="hover:underline">About</a></li>
+          <li><a href="#" class="hover:underline">Review Paper</a></li>
+          <li><a href="./Contact_page.html" class="hover:underline">Contact</a></li>
+          <li><a href="./Login_page.html" class="hover:underline">Login</a></li>
+        </ul>
+      </div>
+
+      <!-- Dropdown Menu for Mobile -->
+      <ul id="mobile-menu" class="hidden md:hidden flex flex-col space-y-2 px-4 bg-gray-800">
+        <li><a href="./index.html" class="hover:underline">Home</a></li>
+          <li><a href="./About_page.html" class="hover:underline">About</a></li>
+          <li><a href="#" class="hover:underline">Review Paper</a></li>
+          <li><a href="./Contact_page.html" class="hover:underline">Contact</a></li>
+          <li><a href="./Login_page.html" class="hover:underline">Login</a></li>
+        </ul>
+    </nav>
+  </header>
+  <script>
+    // JavaScript to toggle mobile menu
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menu = document.getElementById('menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+  <!-- Review Page Header -->
+  <header class="bg-gray-900 text-white text-center py-6">
+    <h1 class="text-4xl font-bold">Review on Kubernetes and Container Orchestration</h1>
+    <p class="mt-2 text-lg">By Lakshya Upadhyay | Cloud Computing (2024-2025)</p>
+  </header>
+
+  <!-- Main Content -->
+  <section class="container mx-auto px-4 py-8">
+    <!-- Introduction -->
+    <article class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4">Introduction</h2>
+      <p class="text-lg leading-relaxed">
+        Container orchestration refers to the automated management of containerized applications, involving deployment, scaling, and coordination across clusters of machines. Kubernetes is a powerful tool designed to simplify the operational complexities of managing containers, developed by Google in 2014. It helps organizations efficiently manage applications through automation and scalability.
+      </p>
+    </article>
+
+    <!-- Key Features of Container Orchestration -->
+    <article class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4">Key Features of Container Orchestration</h2>
+      <ul class="list-disc list-inside text-lg leading-relaxed">
+        <li>Automated Provisioning and Deployment of containers</li>
+        <li>Scaling based on demand</li>
+        <li>Dynamic Resource Management</li>
+        <li>Load Balancing to distribute traffic</li>
+        <li>Health Monitoring with automated restarts of failed instances</li>
+      </ul>
+    </article>
+
+    <!-- Kubernetes Overview -->
+    <article class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4">Kubernetes Overview</h2>
+      <p class="text-lg leading-relaxed mb-4">
+        Kubernetes (k8s) is an open-source platform for automating the deployment, scaling, and management of containerized applications. It ensures that the desired state of the application is maintained, allowing for automatic restarts and scaling based on demand.
+      </p>
+      <h3 class="text-xl font-semibold mb-2">Key Features of Kubernetes:</h3>
+      <ul class="list-disc list-inside text-lg leading-relaxed">
+        <li>Automated Deployment and Scaling of applications</li>
+        <li>Auto-Restart of containers upon failures</li>
+        <li>Load Balancing to distribute traffic evenly</li>
+        <li>Extensibility for custom features and third-party tools</li>
+      </ul>
+    </article>
+
+    <!-- Core Components of Kubernetes -->
+    <article class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4">Core Components of Kubernetes</h2>
+      <div class="mb-4">
+        <h3 class="text-xl font-semibold mb-2">Cluster</h3>
+        <p class="text-lg leading-relaxed">
+          A Kubernetes cluster consists of nodes that run containerized applications. It abstracts hardware, allowing containers to run across multiple nodes for optimized resource utilization.
+        </p>
+      </div>
+      <div class="mb-4">
+        <h3 class="text-xl font-semibold mb-2">Control Plane</h3>
+        <p class="text-lg leading-relaxed">
+          The control plane manages the state of the cluster, assigning tasks to nodes and ensuring that applications are running as expected. It also monitors health and handles task assignments.
+        </p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Nodes</h3>
+        <p class="text-lg leading-relaxed">
+          Nodes are the machines (physical or virtual) where workloads run. Each node hosts pods, the smallest deployable units in Kubernetes, which run containerized applications.
+        </p>
+      </div>
+    </article>
+
+    <!-- Challenges in Kubernetes Adoption -->
+    <article class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4">Challenges and Considerations</h2>
+      <p class="text-lg leading-relaxed mb-4">
+        Adopting Kubernetes comes with challenges such as a steep learning curve, configuration complexities, and operational overheads. Ensuring proper monitoring and security practices are critical for successful adoption.
+      </p>
+      <ul class="list-disc list-inside text-lg leading-relaxed">
+        <li>Steep Learning Curve for new users</li>
+        <li>Operational overhead for managing large-scale deployments</li>
+        <li>Need for proper configuration and monitoring tools</li>
+        <li>Common pitfalls like ignoring health checks or misconfigurations</li>
+      </ul>
+    </article>
+
+    <!-- Conclusion -->
+    <article>
+      <h2 class="text-2xl font-semibold mb-4">Conclusion</h2>
+      <p class="text-lg leading-relaxed">
+        Kubernetes and container orchestration tools significantly streamline the management of containerized applications, making them essential for modern cloud environments. While there are challenges in adoption, the benefits of scalability, resilience, and efficiency make it a crucial tool for cloud-based development.
+      </p>
+    </article>
+
+    <!-- Read More -->
+    <article class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4">Read More</h2>
+      <p class="text-lg leading-relaxed">
+        To know more About this topic, Read Review Paper.
+      </p>
+      <button id="read-btn" class="bg-blue-500 py-2 px-4 rounded-md text-white mt-2" >
+        Read
+      </button>
+    </article>
+    <script>
+      // JavaScript to toggle mobile menu
+      const readBtn = document.getElementById('read-btn');
+  
+      readBtn.addEventListener('click', () => {
+        window.open('../CC project.pdf', '_blank');
+      });
+    </script>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white text-center py-6 mt-8">
+    <p>&copy; 2024 Lakshya Upadhyay. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
